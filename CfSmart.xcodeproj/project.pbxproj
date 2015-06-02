@@ -18,6 +18,7 @@
 		5543F2821B1D346500216B23 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543F2811B1D346500216B23 /* LoginViewController.swift */; };
 		5543F2841B1D349200216B23 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543F2831B1D349200216B23 /* MainViewController.swift */; };
 		5543F2861B1D34E700216B23 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543F2851B1D34E700216B23 /* SurveyViewController.swift */; };
+		FD9C0D610C3130B91D3081E2 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2B8B0DA3F136AFC327D652 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A6342F2F9AD4F6171E02C4A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5543F2521B1D301500216B23 /* CfSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CfSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5543F2561B1D301500216B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5543F2571B1D301500216B23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +48,8 @@
 		5543F2811B1D346500216B23 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5543F2831B1D349200216B23 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5543F2851B1D34E700216B23 /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
+		5F2B8B0DA3F136AFC327D652 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE86B6D08C0FC3C7FACDB691 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD9C0D610C3130B91D3081E2 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +71,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D4E7CA9966932495677B7D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A6342F2F9AD4F6171E02C4A /* Pods.debug.xcconfig */,
+				BE86B6D08C0FC3C7FACDB691 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5543F2491B1D301500216B23 = {
 			isa = PBXGroup;
 			children = (
 				5543F2541B1D301500216B23 /* CfSmart */,
 				5543F26A1B1D301500216B23 /* CfSmartTests */,
 				5543F2531B1D301500216B23 /* Products */,
+				4D4E7CA9966932495677B7D9 /* Pods */,
+				93A37D9BA2B519589F6E6876 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +175,14 @@
 			name = adapter;
 			sourceTree = "<group>";
 		};
+		93A37D9BA2B519589F6E6876 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F2B8B0DA3F136AFC327D652 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5543F2711B1D301500216B23 /* Build configuration list for PBXNativeTarget "CfSmart" */;
 			buildPhases = (
+				6F72132C2652417D59062C12 /* Check Pods Manifest.lock */,
 				5543F24E1B1D301500216B23 /* Sources */,
 				5543F24F1B1D301500216B23 /* Frameworks */,
 				5543F2501B1D301500216B23 /* Resources */,
+				F6D1D3E756E294EF85D4A019 /* Embed Pods Frameworks */,
+				2ED19397E43C209233DC96D8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +280,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2ED19397E43C209233DC96D8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F72132C2652417D59062C12 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F6D1D3E756E294EF85D4A019 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5543F24E1B1D301500216B23 /* Sources */ = {
@@ -390,9 +465,11 @@
 		};
 		5543F2721B1D301500216B23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A6342F2F9AD4F6171E02C4A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CfSmart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -400,9 +477,11 @@
 		};
 		5543F2731B1D301500216B23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE86B6D08C0FC3C7FACDB691 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CfSmart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -461,6 +540,7 @@
 				5543F2731B1D301500216B23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5543F2741B1D301500216B23 /* Build configuration list for PBXNativeTarget "CfSmartTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +549,7 @@
 				5543F2761B1D301500216B23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
