@@ -9,21 +9,39 @@
 import UIKit
 import BubbleTransition
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UIViewControllerTransitioningDelegate
+{
     
-    layoutSublayersOfLayer(layer: CALayer!)
-
+    let transition = BubbleTransition()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Home"
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let  controller = segue.destinationViewController as? UIViewController {
+            controller.modalPresentationStyle = .Custom
+            controller.transitioningDelegate = self
+            
+        }
     }
-   
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        transition.startingPoint = self.view.center
+        transition.bubbleColor = UIColor.MKColor.Purple
+        transition.transitionMode = .Present
+        return transition
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.bubbleColor = UIColor.MKColor.Purple
+        transition.transitionMode = .Dismiss
+        transition.startingPoint = self.view.center
+        return transition
+    }
 
 }
