@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 
 protocol PostLoginDelegate
@@ -21,6 +22,28 @@ class PostLogin {
     
     init(userId : String, delegate : PostLoginDelegate){
         self.delegate = delegate
+        shouldMakeLoginRequest(userId)
         
     }
+    
+    private func shouldMakeLoginRequest(userId : String){
+        
+        Alamofire
+        .request(.GET, "http://52.7.122.129/user/\(userId)/" )
+        .response { (request, response, data, error) in
+                println(request)
+                println(response)
+                println(error)
+            if let res = response{
+                println(res.statusCode)
+                if (res.statusCode == 200){
+                    self.delegate.didSucceedLogin(res.statusCode)
+                }
+                
+                
+            }
+        }
+    }
 }
+
+        

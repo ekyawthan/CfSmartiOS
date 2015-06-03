@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CfSmart/PostLogin.swift"
+            timestampString = "455050253.462068"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "shouldMakeLoginRequest(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CfSmart.PostLogin.(shouldMakeLoginRequest in _A3C510C4AE7FD3BF240406FC3FC1347F) (CfSmart.PostLogin)(Swift.String) -&gt; ()"
+                  moduleName = "CfSmart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyawthan/Nexhealth/CfSmart/CfSmart/PostLogin.swift"
+                  timestampString = "455050253.61698"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "388">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CfSmart.PostLogin.((shouldMakeLoginRequest in _A3C510C4AE7FD3BF240406FC3FC1347F) (CfSmart.PostLogin) -&gt; (Swift.String) -&gt; ()).(closure #1)"
+                  moduleName = "CfSmart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyawthan/Nexhealth/CfSmart/CfSmart/PostLogin.swift"
+                  timestampString = "455050253.618541"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "300">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

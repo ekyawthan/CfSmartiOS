@@ -18,12 +18,6 @@
 #define COCOAPODS_VERSION_MINOR_BubbleTransition 1
 #define COCOAPODS_VERSION_PATCH_BubbleTransition 3
 
-// MaterialKit
-#define COCOAPODS_POD_AVAILABLE_MaterialKit
-#define COCOAPODS_VERSION_MAJOR_MaterialKit 0
-#define COCOAPODS_VERSION_MINOR_MaterialKit 3
-#define COCOAPODS_VERSION_PATCH_MaterialKit 5
-
 // SnapKit
 #define COCOAPODS_POD_AVAILABLE_SnapKit
 #define COCOAPODS_VERSION_MAJOR_SnapKit 0
