@@ -6,7 +6,7 @@ var str = "Hello, playground"
 
 let date : NSDate = NSDate()
 let defualt = NSUserDefaults()
-defualt.setObject(date, forKey: "testDay")
 defualt.objectForKey("testDay")
 
+defualt.objectForKey("testDay")
 

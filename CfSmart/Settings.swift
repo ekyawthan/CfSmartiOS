@@ -22,6 +22,15 @@ class Settings {
     func setDelayCounter(counter : Int)                 { settings.setInteger(counter, forKey: "delayCounter")}
     func getDelayCounter () -> Int                      { return settings.integerForKey("delayCounter")}
     
+    func setLastSurveyDate(date : NSDate )              { settings.setObject(date, forKey: "lastSurveyTakenDate")}
+    
+    func getlastSurveyDate() -> NSDate                  {
+        if let lastSurveyDate: AnyObject = settings.objectForKey("lastSurveyTakenDate"){
+            return (lastSurveyDate as? NSDate)!
+        }
+        return NSDate()
+    }
+    
 
     
     func reset(){
@@ -31,4 +40,4 @@ class Settings {
         }
     }
     
-}
+    }
