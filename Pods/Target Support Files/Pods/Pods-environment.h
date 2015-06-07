@@ -18,6 +18,12 @@
 #define COCOAPODS_VERSION_MINOR_BubbleTransition 1
 #define COCOAPODS_VERSION_PATCH_BubbleTransition 3
 
+// EasyAnimation
+#define COCOAPODS_POD_AVAILABLE_EasyAnimation
+#define COCOAPODS_VERSION_MAJOR_EasyAnimation 0
+#define COCOAPODS_VERSION_MINOR_EasyAnimation 6
+#define COCOAPODS_VERSION_PATCH_EasyAnimation 1
+
 // SnapKit
 #define COCOAPODS_POD_AVAILABLE_SnapKit
 #define COCOAPODS_VERSION_MAJOR_SnapKit 0

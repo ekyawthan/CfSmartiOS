@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -110,10 +111,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF4-rh-78z">
+                                <rect key="frame" x="258.5" y="285" width="83" height="30"/>
+                                <state key="normal" title="Take Survey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Aee-Br-sU9" kind="custom" id="bUk-vl-LS8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="85u-zg-3zX" firstAttribute="top" secondItem="SAU-Ya-jLW" secondAttribute="bottom" constant="8" symbolic="YES" id="8vT-Uh-pv1"/>
+                            <constraint firstAttribute="centerY" secondItem="NF4-rh-78z" secondAttribute="centerY" id="Hnv-st-ofZ"/>
+                            <constraint firstAttribute="centerX" secondItem="NF4-rh-78z" secondAttribute="centerX" id="VDX-fq-XpT"/>
                             <constraint firstItem="1Lm-Ra-6hP" firstAttribute="top" secondItem="uCl-e2-lf6" secondAttribute="bottom" constant="8" symbolic="YES" id="Vgc-CX-JOF"/>
                             <constraint firstItem="SAU-Ya-jLW" firstAttribute="top" secondItem="1Lm-Ra-6hP" secondAttribute="bottom" constant="8" symbolic="YES" id="at0-Df-0Xw"/>
                             <constraint firstItem="1Lm-Ra-6hP" firstAttribute="centerX" secondItem="00v-g5-OwJ" secondAttribute="centerX" id="fRc-y5-WHk"/>
@@ -139,12 +151,95 @@
                     <view key="view" contentMode="scaleToFill" id="OlT-Zb-Pc1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 of 12 Questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wae-6y-4wH">
+                                <rect key="frame" x="16" y="28" width="568" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="CjI-nh-HLX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lai-Ez-0w0" customClass="CardView" customModule="CfSmart" customModuleProvider="target">
+                                <rect key="frame" x="16" y="96" width="568" height="130"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dg5-6B-ibV">
+                                        <rect key="frame" x="15" y="13" width="539" height="104"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </string>
+                                        <color key="textColor" red="0.063338041198935782" green="0.055743169471398346" blue="0.13327917588495575" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Dg5-6B-ibV" firstAttribute="leading" secondItem="Lai-Ez-0w0" secondAttribute="leading" constant="15" id="0Wa-KI-DY8"/>
+                                    <constraint firstAttribute="height" constant="130" id="2JV-3W-ZqO"/>
+                                    <constraint firstItem="Dg5-6B-ibV" firstAttribute="top" secondItem="Lai-Ez-0w0" secondAttribute="top" constant="13" id="CWs-CZ-y48"/>
+                                    <constraint firstItem="Dg5-6B-ibV" firstAttribute="centerX" secondItem="Lai-Ez-0w0" secondAttribute="centerX" id="NLz-iu-WDA"/>
+                                    <constraint firstItem="Dg5-6B-ibV" firstAttribute="centerY" secondItem="Lai-Ez-0w0" secondAttribute="centerY" id="opM-w5-P44"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQH-uc-uDn" customClass="MKButton" customModule="CfSmart" customModuleProvider="target">
+                                <rect key="frame" x="182" y="234" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.6320831427258562" green="1" blue="0.27731097721703624" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="7YX-xL-6NN"/>
+                                    <constraint firstAttribute="width" constant="60" id="7fe-Vy-QIa"/>
+                                </constraints>
+                                <state key="normal" title="Yes">
+                                    <color key="titleColor" red="0.38832018819907577" green="0.035334825761401456" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnL-7P-uZJ" customClass="MKButton" customModule="CfSmart" customModuleProvider="target">
+                                <rect key="frame" x="358" y="234" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.086115453910230233" blue="0.032405945021117044" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="QTT-PF-bMP"/>
+                                    <constraint firstAttribute="height" constant="60" id="jwf-Nh-Zkz"/>
+                                </constraints>
+                                <color key="tintColor" red="0.99395784005279453" green="1" blue="0.91804855038241739" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="No">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUp-6s-ECz">
+                                <rect key="frame" x="250" y="234" width="100" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Lgu-D9-3cm"/>
+                                    <constraint firstAttribute="width" constant="100" id="qsf-vp-cQs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qnL-7P-uZJ" firstAttribute="centerY" secondItem="sUp-6s-ECz" secondAttribute="centerY" id="GYL-V6-xSU"/>
+                            <constraint firstItem="Lai-Ez-0w0" firstAttribute="centerX" secondItem="Wae-6y-4wH" secondAttribute="centerX" id="VkY-rW-vZb"/>
+                            <constraint firstItem="Lai-Ez-0w0" firstAttribute="width" secondItem="Wae-6y-4wH" secondAttribute="width" id="YbH-ED-XS9"/>
+                            <constraint firstItem="sUp-6s-ECz" firstAttribute="top" secondItem="Lai-Ez-0w0" secondAttribute="bottom" constant="8" symbolic="YES" id="bAx-o5-pFC"/>
+                            <constraint firstItem="Wae-6y-4wH" firstAttribute="leading" secondItem="OlT-Zb-Pc1" secondAttribute="leadingMargin" id="fJI-uF-2Gq"/>
+                            <constraint firstItem="sUp-6s-ECz" firstAttribute="centerX" secondItem="Lai-Ez-0w0" secondAttribute="centerX" id="jiG-1Y-S0m"/>
+                            <constraint firstItem="sUp-6s-ECz" firstAttribute="leading" secondItem="fQH-uc-uDn" secondAttribute="trailing" constant="8" id="nBn-Gt-Ixx"/>
+                            <constraint firstItem="Lai-Ez-0w0" firstAttribute="top" secondItem="Wae-6y-4wH" secondAttribute="bottom" constant="8" id="pfw-EV-MFe"/>
+                            <constraint firstItem="Wae-6y-4wH" firstAttribute="trailing" secondItem="OlT-Zb-Pc1" secondAttribute="trailingMargin" id="qwW-De-ALt"/>
+                            <constraint firstItem="qnL-7P-uZJ" firstAttribute="leading" secondItem="sUp-6s-ECz" secondAttribute="trailing" constant="8" id="vx7-ze-yrG"/>
+                            <constraint firstItem="sUp-6s-ECz" firstAttribute="centerY" secondItem="fQH-uc-uDn" secondAttribute="centerY" id="yKc-eO-7um"/>
+                            <constraint firstItem="Wae-6y-4wH" firstAttribute="top" secondItem="tcs-Eh-2XA" secondAttribute="bottom" constant="8" id="yvY-oB-pAy"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="noButton" destination="qnL-7P-uZJ" id="LyX-Rz-Zbn"/>
+                        <outlet property="quesiton" destination="Dg5-6B-ibV" id="nC0-lA-XFl"/>
+                        <outlet property="yesButton" destination="fQH-uc-uDn" id="TLP-jB-I8G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GsD-E7-IWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1675" y="210"/>
+            <point key="canvasLocation" x="1749" y="334"/>
         </scene>
     </scenes>
 </document>

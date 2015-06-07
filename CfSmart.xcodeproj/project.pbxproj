@@ -18,6 +18,7 @@
 		5543F2821B1D346500216B23 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543F2811B1D346500216B23 /* LoginViewController.swift */; };
 		5543F2841B1D349200216B23 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543F2831B1D349200216B23 /* MainViewController.swift */; };
 		5543F2861B1D34E700216B23 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543F2851B1D34E700216B23 /* SurveyViewController.swift */; };
+		55517A221B24B04200B10EB1 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517A211B24B04200B10EB1 /* Survey.swift */; };
 		55931D5C1B1F75A1004DC6BE /* MKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55931D551B1F75A1004DC6BE /* MKButton.swift */; };
 		55931D5D1B1F75A1004DC6BE /* MKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55931D561B1F75A1004DC6BE /* MKColor.swift */; };
 		55931D5E1B1F75A1004DC6BE /* MKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55931D571B1F75A1004DC6BE /* MKImageView.swift */; };
@@ -25,6 +26,7 @@
 		55931D601B1F75A1004DC6BE /* MKLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55931D591B1F75A1004DC6BE /* MKLayer.swift */; };
 		55931D611B1F75A1004DC6BE /* MKTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55931D5A1B1F75A1004DC6BE /* MKTableViewCell.swift */; };
 		55931D621B1F75A1004DC6BE /* MKTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55931D5B1B1F75A1004DC6BE /* MKTextField.swift */; };
+		55931D641B20A464004DC6BE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55931D631B20A464004DC6BE /* CardView.swift */; };
 		FD9C0D610C3130B91D3081E2 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2B8B0DA3F136AFC327D652 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		5543F2811B1D346500216B23 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5543F2831B1D349200216B23 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5543F2851B1D34E700216B23 /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
+		55517A201B24AA8100B10EB1 /* CfSmart.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CfSmart.playground; sourceTree = "<group>"; };
+		55517A211B24B04200B10EB1 /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		55931D551B1F75A1004DC6BE /* MKButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKButton.swift; sourceTree = "<group>"; };
 		55931D561B1F75A1004DC6BE /* MKColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKColor.swift; sourceTree = "<group>"; };
 		55931D571B1F75A1004DC6BE /* MKImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKImageView.swift; sourceTree = "<group>"; };
@@ -62,6 +66,7 @@
 		55931D591B1F75A1004DC6BE /* MKLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKLayer.swift; sourceTree = "<group>"; };
 		55931D5A1B1F75A1004DC6BE /* MKTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKTableViewCell.swift; sourceTree = "<group>"; };
 		55931D5B1B1F75A1004DC6BE /* MKTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKTextField.swift; sourceTree = "<group>"; };
+		55931D631B20A464004DC6BE /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		5F2B8B0DA3F136AFC327D652 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE86B6D08C0FC3C7FACDB691 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +130,7 @@
 				5543F25B1B1D301500216B23 /* Main.storyboard */,
 				5543F25E1B1D301500216B23 /* Images.xcassets */,
 				5543F2551B1D301500216B23 /* Supporting Files */,
+				55517A201B24AA8100B10EB1 /* CfSmart.playground */,
 			);
 			path = CfSmart;
 			sourceTree = "<group>";
@@ -186,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				5543F27F1B1D342500216B23 /* Settings.swift */,
+				55931D631B20A464004DC6BE /* CardView.swift */,
+				55517A211B24B04200B10EB1 /* Survey.swift */,
 			);
 			name = adapter;
 			sourceTree = "<group>";
@@ -367,6 +375,8 @@
 				55931D601B1F75A1004DC6BE /* MKLayer.swift in Sources */,
 				55931D611B1F75A1004DC6BE /* MKTableViewCell.swift in Sources */,
 				5543F2861B1D34E700216B23 /* SurveyViewController.swift in Sources */,
+				55931D641B20A464004DC6BE /* CardView.swift in Sources */,
+				55517A221B24B04200B10EB1 /* Survey.swift in Sources */,
 				5543F27E1B1D317C00216B23 /* PostSurvey.swift in Sources */,
 				55931D5D1B1F75A1004DC6BE /* MKColor.swift in Sources */,
 				5543F2801B1D342500216B23 /* Settings.swift in Sources */,

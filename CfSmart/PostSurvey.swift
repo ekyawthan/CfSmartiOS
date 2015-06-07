@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 
 protocol PostSurveyDelegate {
@@ -16,4 +17,74 @@ protocol PostSurveyDelegate {
 
 class PostSurvey {
     
+    let delegate : PostSurveyDelegate
+    let settings : Settings = Settings()
+    
+    
+    
+    init (anslistList : [Int], delegate : PostSurveyDelegate) {
+        self.delegate       = delegate
+        
+    }
+    
+    private func shouldMakeServerRequest(answerList : [Int]) {
+        
+        let parameter : [String : AnyObject] = [
+            "author" : settings.getUserId()!,
+            "question1" : answerList[0],
+            "question2" : answerList[1],
+            "question3" : answerList[2],
+            "question4" : answerList[3],
+            "question5" : answerList[4],
+            "question6" : answerList[5],
+            "question7" : answerList[6],
+            "question8" : answerList[7],
+            "question9" : answerList[8],
+            "question10": answerList[9],
+            "question11": answerList[10],
+            "question12": answerList[11],
+            "delay_counter": settings.getDelayCounter()
+            
+          
+        ]
+        
+        
+        Alamofire
+            .request(.POST, "", parameters: parameter )
+            
+            .responseJSON { (request, response, json, error) in
+                if let status =  response?.statusCode {
+                    if status == 201 {
+                        self.delegate.didSucceedPostSurvey()
+                    }
+                }
+                
+            }
+        
+       
+    }
+    
+    
+
+    
+    
 }
+
+/*
+{
+"author": "1000",
+"question1": 1,
+"question2": 0,
+"question3": 1,
+"question4": 0,
+"question5": 0,
+"question6": 1,
+"question7": 0,
+"question8": 1,
+"question9": 0,
+"question10": 1,
+"question11": 1,
+"question12": 0,
+"delay_counter": 2
+}
+*/

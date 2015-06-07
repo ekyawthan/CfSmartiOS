@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-EasyAnimation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SnapKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0F601DC344F0FA172D72FF9F</key>
+		<key>0170C59EDFD26425860E185A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>476CF27A548AE32B6DD4B71C</key>
+		<key>445F6896B5CF63B2D46C3739</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7416E3D0409B0FF57EF6913A</key>
+		<key>703B7C0348AE1222F47F146D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>83B56F8DA9B0AC79C1A6DFA6</key>
+		<key>AD84B62291665166B09CA43A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9264F3C0CD01BB29F27E3DBF</key>
+		<key>BEE78093AEFF915DE7F060D1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A43805A0081A74189580119D</key>
+		<key>E9E1E380D86F2D243F817A35</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EAAB6E29331C4555D8470D7A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
