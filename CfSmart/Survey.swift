@@ -29,6 +29,10 @@ class Survey {
     
     
     func isTodayIsMonday() -> Bool {
+        if (getDayOfWeek() == 2){
+            return true
+            
+        }
         return false
     }
    func isOnline() -> Bool {
@@ -36,6 +40,18 @@ class Survey {
     }
     
     func isSurveyTokenToday() -> Bool {
+        if(settings.getlastSurveyDate().isEqualToDate(NSDate())){
+            return true
+        }
+        
         return false
+    }
+    func getDayOfWeek()->Int? {
+        let todayDate = NSDate()
+        let myCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+        let myComponents = myCalendar?.components(.WeekdayCalendarUnit, fromDate: todayDate)
+        let weekDay = myComponents?.weekday
+        println(weekDay)
+        return weekDay
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GJY-xk-3bb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -93,7 +93,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Lm-Ra-6hP">
                                 <rect key="frame" x="231" y="28" width="138" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAU-Ya-jLW">
@@ -102,32 +102,33 @@
                                     <constraint firstAttribute="width" constant="26" id="P1E-5m-kaq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CF-SMART SURVEY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85u-zg-3zX">
                                 <rect key="frame" x="164" y="108" width="273" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF4-rh-78z">
-                                <rect key="frame" x="258.5" y="285" width="83" height="30"/>
+                                <rect key="frame" x="16" y="282.5" width="568" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Take Survey">
+                                    <color key="titleColor" red="0.094117656350135803" green="0.32941177487373352" blue="0.11372549831867218" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Aee-Br-sU9" kind="custom" id="bUk-vl-LS8"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="85u-zg-3zX" firstAttribute="top" secondItem="SAU-Ya-jLW" secondAttribute="bottom" constant="8" symbolic="YES" id="8vT-Uh-pv1"/>
                             <constraint firstAttribute="centerY" secondItem="NF4-rh-78z" secondAttribute="centerY" id="Hnv-st-ofZ"/>
+                            <constraint firstItem="NF4-rh-78z" firstAttribute="leading" secondItem="cWH-DH-GQP" secondAttribute="leadingMargin" id="PwA-hM-a1D"/>
                             <constraint firstAttribute="centerX" secondItem="NF4-rh-78z" secondAttribute="centerX" id="VDX-fq-XpT"/>
                             <constraint firstItem="1Lm-Ra-6hP" firstAttribute="top" secondItem="uCl-e2-lf6" secondAttribute="bottom" constant="8" symbolic="YES" id="Vgc-CX-JOF"/>
                             <constraint firstItem="SAU-Ya-jLW" firstAttribute="top" secondItem="1Lm-Ra-6hP" secondAttribute="bottom" constant="8" symbolic="YES" id="at0-Df-0Xw"/>
+                            <constraint firstItem="NF4-rh-78z" firstAttribute="trailing" secondItem="cWH-DH-GQP" secondAttribute="trailingMargin" id="eQU-bj-TTX"/>
                             <constraint firstItem="1Lm-Ra-6hP" firstAttribute="centerX" secondItem="00v-g5-OwJ" secondAttribute="centerX" id="fRc-y5-WHk"/>
                             <constraint firstItem="85u-zg-3zX" firstAttribute="centerX" secondItem="SAU-Ya-jLW" secondAttribute="centerX" id="fs6-ye-yzl"/>
                             <constraint firstAttribute="centerX" secondItem="00v-g5-OwJ" secondAttribute="centerX" id="g7g-NH-XSQ"/>
@@ -135,6 +136,9 @@
                             <constraint firstItem="SAU-Ya-jLW" firstAttribute="centerX" secondItem="1Lm-Ra-6hP" secondAttribute="centerX" id="zLa-rI-OQM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="Aee-Br-sU9" kind="custom" identifier="toSurveyView" id="qmN-sP-Kak"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVe-Ix-eoa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -158,7 +162,7 @@
                                     <constraint firstAttribute="height" constant="60" id="CjI-nh-HLX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lai-Ez-0w0" customClass="CardView" customModule="CfSmart" customModuleProvider="target">
@@ -232,6 +236,7 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="currentStatus" destination="Wae-6y-4wH" id="8gi-Qc-PVg"/>
                         <outlet property="noButton" destination="qnL-7P-uZJ" id="LyX-Rz-Zbn"/>
                         <outlet property="quesiton" destination="Dg5-6B-ibV" id="nC0-lA-XFl"/>
                         <outlet property="yesButton" destination="fQH-uc-uDn" id="TLP-jB-I8G"/>

@@ -9,11 +9,19 @@
 
 import UIKit
 
-class SurveyViewController: UIViewController
+class SurveyViewController:
+    UIViewController,
+    PostSurveyDelegate
 {
     @IBOutlet weak var quesiton: UITextView!
     @IBOutlet weak var yesButton: MKButton!
     @IBOutlet weak var noButton: MKButton!
+    
+    @IBOutlet weak var currentStatus: UILabel!
+    
+    let settings : Settings = Settings()
+    var collectedAnswer : [Int]  = [Int]()
+    
     let SurveyQuestions : [String]  =  [
     "In the past week have you had a change in sputum volume or colour",
     "In the past week have you had new or increased blood in your sputum",
@@ -23,7 +31,7 @@ class SurveyViewController: UIViewController
     "In the past week have you had increased fatigue or lethargy",
     "In the past week have you had a fever",
     "In the past week have you had a loss of appetite or weight",
-    " In the past week have you had sinus pain or tenderness",
+    "In the past week have you had sinus pain or tenderness",
     "In the past week have you had new or increased chest pain",
     "In the past week have you felt low in mood",
     "In the past week have felt worried"
@@ -34,6 +42,7 @@ class SurveyViewController: UIViewController
     var counter : Int = 0 {
         didSet {
             quesiton.text = SurveyQuestions[counter]
+            currentStatus.text = "\(counter + 1) of 12 Questions"
         }
     }
     
@@ -41,6 +50,9 @@ class SurveyViewController: UIViewController
         super.viewDidLoad()
         setupMKButton(noButton)
         setupMKButton(yesButton)
+        yesButton.userInteractionEnabled = true
+        noButton.userInteractionEnabled = true
+        println("the size of questions : \(SurveyQuestions.count)")
         quesiton.userInteractionEnabled = false
         quesiton.text = SurveyQuestions[0]
         self.noButton.tag = 10
@@ -64,11 +76,20 @@ class SurveyViewController: UIViewController
     
     func didAnswer(button : MKButton) {
         if (button.tag == 10){
-            println("No")
+            collectedAnswer.append(0)
+        }
+        else {
+            collectedAnswer.append(1)
+            
         }
         
         if(counter > 10){
-            counter = 0
+            
+            yesButton.userInteractionEnabled = false
+            noButton.userInteractionEnabled = false
+         
+            PostSurvey(anslistList: collectedAnswer, delegate: self)
+            return
             
         }
         else
@@ -76,6 +97,19 @@ class SurveyViewController: UIViewController
             counter = counter + 1
 
         }
+    }
+    
+    
+    // delegate confirmation 
+    
+    func didSucceedPostSurvey() {
+        println("receive call back")
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+    func didFailedPostSurvey() {
+        
     }
 
    

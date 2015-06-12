@@ -19,6 +19,8 @@
 		5543F2841B1D349200216B23 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543F2831B1D349200216B23 /* MainViewController.swift */; };
 		5543F2861B1D34E700216B23 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543F2851B1D34E700216B23 /* SurveyViewController.swift */; };
 		55517A221B24B04200B10EB1 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517A211B24B04200B10EB1 /* Survey.swift */; };
+		556295E51B25D8C9002B96D0 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556295E41B25D8C9002B96D0 /* SCLAlertView.swift */; };
+		5587ADD81B268E6500DC0EF4 /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5587ADD71B268E6500DC0EF4 /* NotificationSettings.swift */; };
 		55931D5C1B1F75A1004DC6BE /* MKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55931D551B1F75A1004DC6BE /* MKButton.swift */; };
 		55931D5D1B1F75A1004DC6BE /* MKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55931D561B1F75A1004DC6BE /* MKColor.swift */; };
 		55931D5E1B1F75A1004DC6BE /* MKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55931D571B1F75A1004DC6BE /* MKImageView.swift */; };
@@ -59,6 +61,8 @@
 		5543F2851B1D34E700216B23 /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		55517A201B24AA8100B10EB1 /* CfSmart.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CfSmart.playground; sourceTree = "<group>"; };
 		55517A211B24B04200B10EB1 /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		556295E41B25D8C9002B96D0 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
+		5587ADD71B268E6500DC0EF4 /* NotificationSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSettings.swift; sourceTree = "<group>"; };
 		55931D551B1F75A1004DC6BE /* MKButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKButton.swift; sourceTree = "<group>"; };
 		55931D561B1F75A1004DC6BE /* MKColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKColor.swift; sourceTree = "<group>"; };
 		55931D571B1F75A1004DC6BE /* MKImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKImageView.swift; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 				5543F27F1B1D342500216B23 /* Settings.swift */,
 				55931D631B20A464004DC6BE /* CardView.swift */,
 				55517A211B24B04200B10EB1 /* Survey.swift */,
+				5587ADD71B268E6500DC0EF4 /* NotificationSettings.swift */,
 			);
 			name = adapter;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 		55931D541B1F7594004DC6BE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				556295E41B25D8C9002B96D0 /* SCLAlertView.swift */,
 				55931D551B1F75A1004DC6BE /* MKButton.swift */,
 				55931D561B1F75A1004DC6BE /* MKColor.swift */,
 				55931D571B1F75A1004DC6BE /* MKImageView.swift */,
@@ -382,7 +388,9 @@
 				5543F2801B1D342500216B23 /* Settings.swift in Sources */,
 				5543F2841B1D349200216B23 /* MainViewController.swift in Sources */,
 				55931D5E1B1F75A1004DC6BE /* MKImageView.swift in Sources */,
+				5587ADD81B268E6500DC0EF4 /* NotificationSettings.swift in Sources */,
 				55931D621B1F75A1004DC6BE /* MKTextField.swift in Sources */,
+				556295E51B25D8C9002B96D0 /* SCLAlertView.swift in Sources */,
 				55931D5F1B1F75A1004DC6BE /* MKLabel.swift in Sources */,
 				55931D5C1B1F75A1004DC6BE /* MKButton.swift in Sources */,
 				5543F2821B1D346500216B23 /* LoginViewController.swift in Sources */,

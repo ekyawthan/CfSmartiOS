@@ -34,13 +34,19 @@ class PostLogin {
                 println(request)
                 println(response)
                 println(error)
-            self.delegate.didSucceedLogin(12)
             if let res = response{
                 println(res.statusCode)
                 if (res.statusCode == 200){
                     self.delegate.didSucceedLogin(res.statusCode)
                 }
+                else
+                {
+                    self.delegate.didFailedLogin(res.statusCode)
+                }
                 
+                
+            }
+            else {
                 
             }
         }

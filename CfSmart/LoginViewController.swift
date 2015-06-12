@@ -15,9 +15,14 @@ class LoginViewController: UIViewController, PostLoginDelegate, UIViewController
     @IBOutlet weak var userId: MKTextField!
     @IBOutlet weak var signInButton: MKButton!
     
+    let settings : Settings = Settings()
+    
     let transition = BubbleTransition()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let settings : Settings = Settings()
+        println(Survey().isSurveyTokenToday())
 
         userId.floatingPlaceholderEnabled = true
         userId.cornerRadius = 1.0
@@ -65,6 +70,7 @@ class LoginViewController: UIViewController, PostLoginDelegate, UIViewController
     
     func didSucceedLogin(status: Int) {
         println("succeed call recieved")
+        settings.setUserId(userId.text)
         performSegueWithIdentifier("redirectToMainFromLogin", sender: nil)
     }
     func didFailedLogin(status: Int) {
