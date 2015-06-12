@@ -22,7 +22,8 @@ class LoginViewController: UIViewController, PostLoginDelegate, UIViewController
         super.viewDidLoad()
         
         let settings : Settings = Settings()
-        println(Survey().isSurveyTokenToday())
+        println(settings.isUserLogin())
+       
 
         userId.floatingPlaceholderEnabled = true
         userId.cornerRadius = 1.0
@@ -35,6 +36,23 @@ class LoginViewController: UIViewController, PostLoginDelegate, UIViewController
         signInButton.layer.shadowRadius = 5.0
         signInButton.layer.shadowColor = UIColor.blackColor().CGColor
         signInButton.layer.shadowOffset = CGSize(width: 0, height: 2.5)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if(settings.isUserLogin()){
+            performSegueWithIdentifier("redirectToMainFromLogin", sender: nil)
+            
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if(settings.isUserLogin()){
+            performSegueWithIdentifier("redirectToMainFromLogin", sender: nil)
+            
+        }
+        
     }
     
     

@@ -8,24 +8,29 @@
 
 import Foundation
 
+ let UserLoginStatus = "loginStatus"
+ let UserId = "userID"
+ let delayCounter = "delayCounter"
+ let LastSurveyDate = "lastSurveyDate"
+
 class Settings {
     let settings = NSUserDefaults()
     
     // user login status
     
-    func isUserLogin()->Bool                            { return settings.boolForKey("isUserLogin")}
-    func setUserLoginStatus(#isLogin:Bool)              { settings.setObject(isLogin, forKey: "isUserLogin")}
+    func isUserLogin()->Bool                            { return settings.boolForKey(UserLoginStatus)}
+    func setUserLoginStatus(#isLogin:Bool)              { settings.setObject(isLogin, forKey: UserLoginStatus)}
     
-    func setUserId(userId : String)                     { settings.setObject(userId, forKey: "userId")}
-    func getUserId() -> String?                         { return settings.stringForKey("userid")}
+    func setUserId(userId : String)                     { settings.setObject(userId, forKey: UserId)}
+    func getUserId() -> String?                         { return settings.stringForKey(UserId)}
     
-    func setDelayCounter(counter : Int)                 { settings.setInteger(counter, forKey: "delayCounter")}
-    func getDelayCounter () -> Int                      { return settings.integerForKey("delayCounter")}
+    func setDelayCounter(counter : Int)                 { settings.setInteger(counter, forKey: delayCounter)}
+    func getDelayCounter () -> Int                      { return settings.integerForKey(delayCounter)}
     
-    func setLastSurveyDate(date : NSDate )              { settings.setObject(date, forKey: "lastSurveyTakenDate")}
+    func setLastSurveyDate(date : NSDate )              { settings.setObject(date, forKey: LastSurveyDate)}
     
     func getlastSurveyDate() -> NSDate                  {
-        if let lastSurveyDate: AnyObject = settings.objectForKey("lastSurveyTakenDate"){
+        if let lastSurveyDate: AnyObject = settings.objectForKey(LastSurveyDate){
             return (lastSurveyDate as? NSDate)!
         }
         return NSDate()

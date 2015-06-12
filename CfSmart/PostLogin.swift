@@ -19,9 +19,13 @@ protocol PostLoginDelegate
 class PostLogin {
     
     var delegate : PostLoginDelegate
+    var settings : Settings
+    var userID : String
     
     init(userId : String, delegate : PostLoginDelegate){
         self.delegate = delegate
+        self.userID = userId
+        self.settings = Settings()
         shouldMakeLoginRequest(userId)
         
     }
@@ -37,10 +41,15 @@ class PostLogin {
             if let res = response{
                 println(res.statusCode)
                 if (res.statusCode == 200){
+                    self.settings.setUserId(self.userID)
+                    self.settings.setUserLoginStatus(isLogin: true)
+                    
                     self.delegate.didSucceedLogin(res.statusCode)
                 }
                 else
                 {
+                    self.settings.setUserLoginStatus(isLogin: false)
+
                     self.delegate.didFailedLogin(res.statusCode)
                 }
                 

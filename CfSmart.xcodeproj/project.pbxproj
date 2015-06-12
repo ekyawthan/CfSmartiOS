@@ -29,6 +29,8 @@
 		55931D611B1F75A1004DC6BE /* MKTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55931D5A1B1F75A1004DC6BE /* MKTableViewCell.swift */; };
 		55931D621B1F75A1004DC6BE /* MKTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55931D5B1B1F75A1004DC6BE /* MKTextField.swift */; };
 		55931D641B20A464004DC6BE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55931D631B20A464004DC6BE /* CardView.swift */; };
+		55C541241B2B35A6009C1816 /* SurveyAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C541231B2B35A6009C1816 /* SurveyAlarm.swift */; };
+		55C541261B2B3BEB009C1816 /* SurveyAlarmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C541251B2B3BEB009C1816 /* SurveyAlarmManager.swift */; };
 		FD9C0D610C3130B91D3081E2 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2B8B0DA3F136AFC327D652 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		55931D5A1B1F75A1004DC6BE /* MKTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKTableViewCell.swift; sourceTree = "<group>"; };
 		55931D5B1B1F75A1004DC6BE /* MKTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKTextField.swift; sourceTree = "<group>"; };
 		55931D631B20A464004DC6BE /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		55C541231B2B35A6009C1816 /* SurveyAlarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyAlarm.swift; sourceTree = "<group>"; };
+		55C541251B2B3BEB009C1816 /* SurveyAlarmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyAlarmManager.swift; sourceTree = "<group>"; };
 		5F2B8B0DA3F136AFC327D652 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE86B6D08C0FC3C7FACDB691 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,6 +203,8 @@
 				55931D631B20A464004DC6BE /* CardView.swift */,
 				55517A211B24B04200B10EB1 /* Survey.swift */,
 				5587ADD71B268E6500DC0EF4 /* NotificationSettings.swift */,
+				55C541231B2B35A6009C1816 /* SurveyAlarm.swift */,
+				55C541251B2B3BEB009C1816 /* SurveyAlarmManager.swift */,
 			);
 			name = adapter;
 			sourceTree = "<group>";
@@ -377,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55C541241B2B35A6009C1816 /* SurveyAlarm.swift in Sources */,
 				5543F2581B1D301500216B23 /* AppDelegate.swift in Sources */,
 				55931D601B1F75A1004DC6BE /* MKLayer.swift in Sources */,
 				55931D611B1F75A1004DC6BE /* MKTableViewCell.swift in Sources */,
@@ -393,6 +400,7 @@
 				556295E51B25D8C9002B96D0 /* SCLAlertView.swift in Sources */,
 				55931D5F1B1F75A1004DC6BE /* MKLabel.swift in Sources */,
 				55931D5C1B1F75A1004DC6BE /* MKButton.swift in Sources */,
+				55C541261B2B3BEB009C1816 /* SurveyAlarmManager.swift in Sources */,
 				5543F2821B1D346500216B23 /* LoginViewController.swift in Sources */,
 				5543F27C1B1D308B00216B23 /* PostLogin.swift in Sources */,
 			);

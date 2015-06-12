@@ -12,13 +12,10 @@ import BubbleTransition
 class MainViewController: UIViewController, UIViewControllerTransitioningDelegate
 {
     
+    @IBOutlet weak var surveyStatus: UITextView!
+
     
-    @IBOutlet weak var takeSurveyButton: UIButton! {
-        didSet {
-            
-        }
-        
-    }
+    @IBOutlet weak var takeSurvey: MKButton!
     let transition = BubbleTransition()
     
     let settings : Settings = Settings()
@@ -27,27 +24,34 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Home"
-        takeSurveyButton.addTarget(self, action: "toggleSurvey", forControlEvents: UIControlEvents.TouchUpInside)
-        setNotification()
+        toggleSurveyButton()
+        println("\(settings.getDelayCounter())")
+        let alarm = SurveyAlarm(alarmTime: NSDate(), unitId: "UUID")
+        SurveyAlarmManager.sharedInstance.addAlarm(alarm)
+        
         
 
-        // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        toggleSurveyButton()
+        
+    }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-       // setNotification()
+       
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if let  controller = segue.destinationViewController as? UIViewContler
-//        {
-//            controller.modalPresentationStyle = .Custom
-//            controller.transitioningDelegate = self
-//            
-//        }
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let  controller = segue.destinationViewController as? UIViewController
+        {
+            controller.modalPresentationStyle = .Custom
+            controller.transitioningDelegate = self
+            
+        }
+    }
     
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
@@ -58,7 +62,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     }
     
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.bubbleColor = UIColor.MKColor.Purple
+        transition.bubbleColor = UIColor.MKColor.Grey
         transition.transitionMode = .Dismiss
         transition.startingPoint = self.view.center
         return transition
@@ -77,23 +81,26 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         
     }
     
-    private func toggleSurvey(){
-        
-        if survey.isSurveyAvailable() {
-            takeSurveyButton.titleLabel?.text = "Take Survey"
-            self.performSegueWithIdentifier("toSurveyView", sender: self)
-            
+    func toggleSurveyButton() {
+        if survey.isSurveyAvailable(){
+            surveyStatus.text = "Survey Available"
+            takeSurvey.userInteractionEnabled = true
+            takeSurvey.setTitle("Take Survey", forState: UIControlState.Normal)
+        }else{
+            surveyStatus.text = "Survey Not Available, Come Back On Monday"
+            takeSurvey.userInteractionEnabled = false
+            takeSurvey.setTitle("Stay Healthy", forState: UIControlState.Normal)
         }
-        else
-        {
-            takeSurveyButton.titleLabel?.text = "Come back On Monday"
-        }
-        
-    
-    
     }
     
-    
+  
+    @IBAction func didClickSignOff(sender: AnyObject) {
+        self.settings.setUserLoginStatus(isLogin: false)
+        self.settings.setUserId("")
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
+   
     
     
 

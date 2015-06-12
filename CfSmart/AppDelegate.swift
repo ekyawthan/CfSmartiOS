@@ -12,35 +12,57 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    /*
+let todoCategory = UIMutableUserNotificationCategory() // notification categories allow us to create groups of actions that we can associate with a notification
+todoCategory.identifier = "TODO_CATEGORY"
+todoCategory.setActions([remindAction, completeAction], forContext: .Default) // UIUserNotificationActionContext.Default (4 actions max)
+todoCategory.setActions([completeAction, remindAction], forContext: .Minimal) // UIUserNotificationActionContext.Minimal - for when space is limited (2 actions max)
+
+application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: .Alert | .Badge | .Sound, categories: NSSet(array: [todoCategory]) as Set<NSObject>)) //
+*/
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Sound | UIUserNotificationType.Alert |
-            UIUserNotificationType.Badge, categories: nil))
+//        
+//        let completeAction = UIMutableUserNotificationAction()
+//        completeAction.identifier = "COMPLETE_SURVEY"
+//        completeAction.title = "Aleady Took"
+//        completeAction.activationMode = .Background
+//        
+//        completeAction.authenticationRequired = false
+//        completeAction.destructive = true
+        
+        let snoozeAction = UIMutableUserNotificationAction()
+        snoozeAction.identifier = "SNOOZE"
+        snoozeAction.title = "Snooze 30 min"
+        snoozeAction.activationMode = .Background
+        snoozeAction.destructive = false
+        let alarmCategory = UIMutableUserNotificationCategory()
+        alarmCategory.identifier = "SURVEY_ALARM_CATAGORIES"
+        alarmCategory.setActions([snoozeAction], forContext: .Default)
+        alarmCategory.setActions([snoozeAction], forContext: .Minimal)
+        
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: .Alert | .Badge | .Sound, categories: NSSet(array: [alarmCategory]) as Set<NSObject>))
         return true
     }
 
-    func applicationWillResignActive(application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-    }
-
-    func applicationDidEnterBackground(application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(application: UIApplication) {
-        // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
+        var alarm = SurveyAlarm(alarmTime: notification.fireDate!, unitId: notification.userInfo!["UUID"] as! String)
+        switch (identifier!) {
+            case "COMPLETE_SURVEY":
+                
+                SurveyAlarmManager.sharedInstance.cancelAlarm(alarm)
+                
+            break
+            case "SNOOZE":
+                SurveyAlarmManager.sharedInstance.scheduleAlarm(alarm)
+            break
+            
+        default :
+            break
+        }
+        completionHandler()
     }
 
 

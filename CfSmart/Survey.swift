@@ -29,22 +29,23 @@ class Survey {
     
     
     func isTodayIsMonday() -> Bool {
-        if (getDayOfWeek() == 2){
+        if (getDayOfWeek() == 6){
             return true
             
         }
         return false
     }
    func isOnline() -> Bool {
-        return false
+        return true
     }
     
     func isSurveyTokenToday() -> Bool {
-        if(settings.getlastSurveyDate().isEqualToDate(NSDate())){
-            return true
-        }
+        println("last survey date : \(dayDifferent())")
+        println("TOday survey date : \(NSDate())")
         
-        return false
+        return dayDifferent() < 1 ? true : false
+
+        
     }
     func getDayOfWeek()->Int? {
         let todayDate = NSDate()
@@ -54,4 +55,33 @@ class Survey {
         println(weekDay)
         return weekDay
     }
+    
+    
+    func dayDifferent() -> Int {
+        var calendar: NSCalendar = NSCalendar.currentCalendar()
+        
+        // Replace the hour (time) of both dates with 00:00
+        let date1 = calendar.startOfDayForDate(settings.getlastSurveyDate())
+        let date2 = calendar.startOfDayForDate(NSDate())
+        
+        let flags = NSCalendarUnit.DayCalendarUnit
+        let components = calendar.components(flags, fromDate: date1, toDate: date2, options: nil)
+        
+         return components.day
+    }
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

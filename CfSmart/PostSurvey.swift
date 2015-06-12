@@ -30,11 +30,13 @@ class PostSurvey {
     }
     
     private func shouldMakeServerRequest(answerList : [Int]) {
+        let userID : String = settings.getUserId()!
+        let delay : Int = settings.getDelayCounter()
         
         let parameter :[String : AnyObject] = [
         
             
-            "author": "1000",
+            "author": userID,
             "question1": answerList[0],
             "question2": answerList[1],
             "question3": answerList[2],
@@ -47,7 +49,7 @@ class PostSurvey {
             "question10": answerList[9],
             "question11": answerList[10],
             "question12": answerList[11],
-            "delay_counter": 2
+            "delay_counter": delay
             
         ]
         println("\(parameter)")
@@ -59,6 +61,8 @@ class PostSurvey {
                 if let status =  response?.statusCode {
                     println(status)
                     if status == 201 {
+                        self.settings.setLastSurveyDate(NSDate())
+                        
                         self.delegate.didSucceedPostSurvey()
                     }
                 }
