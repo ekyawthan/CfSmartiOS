@@ -24,29 +24,28 @@ class SurveyAlarmManager {
     
     func addAlarm(item : SurveyAlarm) {
         var notification            = UILocalNotification()
-        notification.timeZone   = NSTimeZone.defaultTimeZone()
+        notification.timeZone       = NSTimeZone.defaultTimeZone()
         notification.alertBody      = "Survey available, Click to Take Survey"
         notification.alertAction    = "open"
         notification.fireDate       = item.alarmTime
-        notification.repeatInterval = NSCalendarUnit.WeekCalendarUnit
-        notification.soundName      = UILocalNotificationDefaultSoundName
-        notification.userInfo       = ["alarmUser" : "cfsmart", "UUID" : item.UUID]
-        notification.category       = "SURVEY_ALARM_CATAGORIES"
+        notification.repeatInterval         = NSCalendarUnit.WeekCalendarUnit
+        notification.soundName              = UILocalNotificationDefaultSoundName
+        notification.userInfo               = ["alarmUser" : "cfsmart", "UUID" : item.UUID]
+        notification.category               = "SURVEY_ALARM_CATAGORIES"
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
         
         
     }
     
     func scheduleAlarm(item : SurveyAlarm) {
-        
-        
-        var notification = UILocalNotification()
-        notification.alertBody = "Survey available"
-        notification.alertAction = "open"
-        notification.fireDate = NSDate().dateByAddingTimeInterval(30) // 30 minutes from current time
-        notification.soundName = UILocalNotificationDefaultSoundName
-        notification.userInfo       = ["alarmUser" : "cf", "UUID" : "UUID1"]
-        notification.category       = "SURVEY_ALARM_CATAGORIES"
+    
+        var notification                = UILocalNotification()
+        notification.alertBody          = "Survey available"
+        notification.alertAction        = "open"
+        notification.fireDate           = NSDate().dateByAddingTimeInterval(30) // 30 minutes from current time
+        notification.soundName          = UILocalNotificationDefaultSoundName
+        notification.userInfo           = ["alarmUser" : "cf", "UUID" : "UUID1"]
+        notification.category           = "SURVEY_ALARM_CATAGORIES"
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
         
     }
