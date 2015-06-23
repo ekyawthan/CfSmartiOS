@@ -14,7 +14,15 @@ import Foundation
  let LastSurveyDate = "lastSurveyDate"
 
 class Settings {
-    let settings = NSUserDefaults()
+    
+    class var sharedInstance : Settings {
+        struct Static {
+            static let instance : Settings = Settings()
+        }
+        return Static.instance
+        
+    }
+    let settings = NSUserDefaults.standardUserDefaults()
     
     // user login status
     
@@ -27,13 +35,15 @@ class Settings {
     func setDelayCounter(counter : Int)                 { settings.setInteger(counter, forKey: delayCounter)}
     func getDelayCounter () -> Int                      { return settings.integerForKey(delayCounter)}
     
-    func setLastSurveyDate(date : NSDate )              { settings.setObject(date, forKey: LastSurveyDate)}
+    func setLastSurveyDate(date : String)              { settings.setObject(date, forKey: LastSurveyDate)}
     
-    func getlastSurveyDate() -> NSDate                  {
-        if let lastSurveyDate: AnyObject = settings.objectForKey(LastSurveyDate){
-            return (lastSurveyDate as? NSDate)!
+    func getlastSurveyDate() -> String?                 {
+        var surveyDate = settings.stringForKey(LastSurveyDate)
+        if surveyDate == nil {
+            return "2010-09-01"
         }
-        return NSDate()
+        return surveyDate
+        
     }
     
 

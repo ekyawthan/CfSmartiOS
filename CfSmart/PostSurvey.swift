@@ -61,7 +61,11 @@ class PostSurvey {
                 if let status =  response?.statusCode {
                     println(status)
                     if status == 201 {
-                        self.settings.setLastSurveyDate(NSDate())
+                        let dateFormatter = NSDateFormatter()
+                        dateFormatter.dateFormat = "yyyy-MM-dd"
+                        let surveyDate  = dateFormatter.stringFromDate(NSDate())
+                        println(surveyDate)
+                        self.settings.setLastSurveyDate(surveyDate)
                         
                         self.delegate.didSucceedPostSurvey()
                     }

@@ -15,47 +15,34 @@ class LoginViewController: UIViewController, PostLoginDelegate, UIViewController
     @IBOutlet weak var userId: MKTextField!
     @IBOutlet weak var signInButton: MKButton!
     
-    let settings : Settings = Settings()
     
     let transition = BubbleTransition()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let settings : Settings = Settings()
-        println(settings.isUserLogin())
-       
-
         userId.floatingPlaceholderEnabled = true
         userId.cornerRadius = 1.0
         userId.placeholder = "user id"
         userId.layer.borderColor = UIColor.MKColor.Green.CGColor
         userId.rippleLayerColor = UIColor.MKColor.LightGreen
         userId.tintColor = UIColor.MKColor.LightGreen
-        
         signInButton.layer.shadowOpacity = 0.5
         signInButton.layer.shadowRadius = 5.0
         signInButton.layer.shadowColor = UIColor.blackColor().CGColor
         signInButton.layer.shadowOffset = CGSize(width: 0, height: 2.5)
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        if(settings.isUserLogin()){
-            performSegueWithIdentifier("redirectToMainFromLogin", sender: nil)
-            
-        }
-    }
+    
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        if(settings.isUserLogin()){
+        if(Settings.sharedInstance.isUserLogin()){
             performSegueWithIdentifier("redirectToMainFromLogin", sender: nil)
             
         }
         
     }
     
-    
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let controller = segue.destinationViewController as? UIViewController {
             controller.transitioningDelegate = self
@@ -88,7 +75,7 @@ class LoginViewController: UIViewController, PostLoginDelegate, UIViewController
     
     func didSucceedLogin(status: Int) {
         println("succeed call recieved")
-        settings.setUserId(userId.text)
+        Settings.sharedInstance.setUserId(userId.text)
         performSegueWithIdentifier("redirectToMainFromLogin", sender: nil)
     }
     func didFailedLogin(status: Int) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		552B102E1B31265300367DE0 /* WantedDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B102D1B31265300367DE0 /* WantedDay.swift */; };
 		5543F2581B1D301500216B23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543F2571B1D301500216B23 /* AppDelegate.swift */; };
 		5543F25D1B1D301500216B23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5543F25B1B1D301500216B23 /* Main.storyboard */; };
 		5543F25F1B1D301500216B23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5543F25E1B1D301500216B23 /* Images.xcassets */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		2A6342F2F9AD4F6171E02C4A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		552B102D1B31265300367DE0 /* WantedDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WantedDay.swift; sourceTree = "<group>"; };
 		5543F2521B1D301500216B23 /* CfSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CfSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5543F2561B1D301500216B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5543F2571B1D301500216B23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				55931D591B1F75A1004DC6BE /* MKLayer.swift */,
 				55931D5A1B1F75A1004DC6BE /* MKTableViewCell.swift */,
 				55931D5B1B1F75A1004DC6BE /* MKTextField.swift */,
+				552B102D1B31265300367DE0 /* WantedDay.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				TargetAttributes = {
 					5543F2511B1D301500216B23 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = UX56ED85HW;
 					};
 					5543F2661B1D301500216B23 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -384,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55C541241B2B35A6009C1816 /* SurveyAlarm.swift in Sources */,
+				552B102E1B31265300367DE0 /* WantedDay.swift in Sources */,
 				5543F2581B1D301500216B23 /* AppDelegate.swift in Sources */,
 				55931D601B1F75A1004DC6BE /* MKLayer.swift in Sources */,
 				55931D611B1F75A1004DC6BE /* MKTableViewCell.swift in Sources */,
@@ -461,7 +466,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: David Putrino (UX56ED85HW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Putrino (UX56ED85HW)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -480,9 +486,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "a68c45f5-5ee8-4f20-9bb4-48f676cfb667";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -505,7 +512,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: David Putrino (UX56ED85HW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Putrino (UX56ED85HW)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -518,8 +526,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "a68c45f5-5ee8-4f20-9bb4-48f676cfb667";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -530,10 +539,13 @@
 			baseConfigurationReference = 2A6342F2F9AD4F6171E02C4A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: David Putrino (UX56ED85HW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				INFOPLIST_FILE = CfSmart/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "dbf0ea61-eb87-4ff8-8bbd-a1f8d13d1e4e";
 			};
 			name = Debug;
 		};
@@ -542,10 +554,13 @@
 			baseConfigurationReference = BE86B6D08C0FC3C7FACDB691 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: David Putrino (UX56ED85HW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				INFOPLIST_FILE = CfSmart/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "dbf0ea61-eb87-4ff8-8bbd-a1f8d13d1e4e";
 			};
 			name = Release;
 		};
@@ -553,6 +568,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: David Putrino (UX56ED85HW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Putrino (UX56ED85HW)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -564,6 +581,7 @@
 				INFOPLIST_FILE = CfSmartTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "dbf0ea61-eb87-4ff8-8bbd-a1f8d13d1e4e";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CfSmart.app/CfSmart";
 			};
 			name = Debug;
@@ -572,6 +590,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: David Putrino (UX56ED85HW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Putrino (UX56ED85HW)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -579,9 +599,92 @@
 				INFOPLIST_FILE = CfSmartTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "dbf0ea61-eb87-4ff8-8bbd-a1f8d13d1e4e";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CfSmart.app/CfSmart";
 			};
 			name = Release;
+		};
+		55F3F5931B2CF9B800B684D0 /* Distributions */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: David Putrino (UX56ED85HW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Putrino (UX56ED85HW)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "a68c45f5-5ee8-4f20-9bb4-48f676cfb667";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Distributions;
+		};
+		55F3F5941B2CF9B800B684D0 /* Distributions */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A6342F2F9AD4F6171E02C4A /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: David Putrino (UX56ED85HW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				INFOPLIST_FILE = CfSmart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "dbf0ea61-eb87-4ff8-8bbd-a1f8d13d1e4e";
+			};
+			name = Distributions;
+		};
+		55F3F5951B2CF9B800B684D0 /* Distributions */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: David Putrino (UX56ED85HW)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CfSmartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "dbf0ea61-eb87-4ff8-8bbd-a1f8d13d1e4e";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CfSmart.app/CfSmart";
+			};
+			name = Distributions;
 		};
 /* End XCBuildConfiguration section */
 
@@ -590,6 +693,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5543F26F1B1D301500216B23 /* Debug */,
+				55F3F5931B2CF9B800B684D0 /* Distributions */,
 				5543F2701B1D301500216B23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -599,6 +703,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5543F2721B1D301500216B23 /* Debug */,
+				55F3F5941B2CF9B800B684D0 /* Distributions */,
 				5543F2731B1D301500216B23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -608,6 +713,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5543F2751B1D301500216B23 /* Debug */,
+				55F3F5951B2CF9B800B684D0 /* Distributions */,
 				5543F2761B1D301500216B23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

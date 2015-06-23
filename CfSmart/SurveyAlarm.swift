@@ -8,6 +8,17 @@
 
 import Foundation
 
+enum Day : Int {
+    case SUNDAY = 1
+    case MONDAY
+    case TUESDAY
+    case WEDNESDAY
+    case THURSDAY
+    case FRIDAY
+    case SATURDAY
+    
+}
+
 
 struct  SurveyAlarm {
     
@@ -19,6 +30,25 @@ struct  SurveyAlarm {
         self.UUID       = unitId
     }
     
-    
-    
-}
+   
+       
+        
+        
+    }
+    /*
+NSDate *today = [NSDate date];
+NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+[gregorian setLocale:[NSLocale currentLocale]];
+
+NSDateComponents *nowComponents = [gregorian components:NSYearCalendarUnit | NSWeekCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit fromDate:today];
+
+[nowComponents setWeekday:2]; //Monday
+[nowComponents setWeek: [nowComponents week] + 1]; //Next week
+[nowComponents setHour:8]; //8a.m.
+[nowComponents setMinute:0];
+[nowComponents setSecond:0];
+
+NSDate *beginningOfWeek = [gregorian dateFromComponents:nowComponents];
+Now that you have the new NSDate, you can calculate the difference between
+*/
+

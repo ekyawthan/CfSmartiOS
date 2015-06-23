@@ -12,23 +12,48 @@ import BubbleTransition
 class MainViewController: UIViewController, UIViewControllerTransitioningDelegate
 {
     
-    @IBOutlet weak var surveyStatus: UITextView!
 
     
+    @IBOutlet weak var surveyStatus: UILabel!
     @IBOutlet weak var takeSurvey: MKButton!
     let transition = BubbleTransition()
     
     let settings : Settings = Settings()
     let survey : Survey  = Survey()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Home"
-        toggleSurveyButton()
-        println("\(settings.getDelayCounter())")
-        let alarm = SurveyAlarm(alarmTime: NSDate(), unitId: "UUID")
-        SurveyAlarmManager.sharedInstance.addAlarm(alarm)
+        surveyStatus.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        surveyStatus.numberOfLines = 0
+        self.title = "Smart-CF"
         
+
+        toggleSurveyButton()
+        let now : NSDate = NSDate()
+        let calendar : NSCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+        let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitMonth | .CalendarUnitYear | .CalendarUnitDay, fromDate: now)
+       
+        let weekday         : Int = components.weekday
+        let daysToMonday    : Int = (9 - weekday) % 7
+        let wait            : NSTimeInterval = NSTimeInterval(daysToMonday)
+        let nextMonday      : NSDate = now.dateByAddingTimeInterval(60 * 60 * 24 * wait )
+        let cal             : NSCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+
+        let comp = cal.components(.CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitMonth | .CalendarUnitYear | .CalendarUnitDay, fromDate: nextMonday)
+        comp.hour = 12
+        comp.minute = 0
+        comp.second = 0
+        let fireTime : NSDate = calendar.dateFromComponents(components)!
+        println(fireTime)
+        
+        println(nextMonday)
+        
+        
+        let alarm = SurveyAlarm(alarmTime: survey.wantedDay(.MONDAY)!, unitId: "UUID")
+       SurveyAlarmManager.sharedInstance.addAlarm(alarm)
+  
+
         
 
     }
@@ -41,6 +66,7 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        toggleSurveyButton()
        
     }
     
@@ -85,11 +111,15 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         if survey.isSurveyAvailable(){
             surveyStatus.text = "Survey Available"
             takeSurvey.userInteractionEnabled = true
+            takeSurvey.backgroundColor = UIColor.blueColor()
             takeSurvey.setTitle("Take Survey", forState: UIControlState.Normal)
         }else{
-            surveyStatus.text = "Survey Not Available, Come Back On Monday"
+            surveyStatus.lineBreakMode = .ByWordWrapping
+            surveyStatus.numberOfLines = 0
+            surveyStatus.text = "Thank you for completing this questionnaire"
             takeSurvey.userInteractionEnabled = false
-            takeSurvey.setTitle("Stay Healthy", forState: UIControlState.Normal)
+            takeSurvey.backgroundColor = UIColor.clearColor()
+            takeSurvey.setTitle("", forState: UIControlState.Normal)
         }
     }
     
@@ -97,11 +127,9 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     @IBAction func didClickSignOff(sender: AnyObject) {
         self.settings.setUserLoginStatus(isLogin: false)
         self.settings.setUserId("")
+        Settings.sharedInstance.reset()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
-   
-    
-    
 
 }
