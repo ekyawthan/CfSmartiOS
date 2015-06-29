@@ -26,9 +26,6 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         super.viewDidLoad()
         surveyStatus.lineBreakMode = NSLineBreakMode.ByWordWrapping
         surveyStatus.numberOfLines = 0
-        self.title = "Smart-CF"
-        
-
         toggleSurveyButton()
         let now : NSDate = NSDate()
         let calendar : NSCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!

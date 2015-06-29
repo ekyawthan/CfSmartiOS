@@ -545,7 +545,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dbf0ea61-eb87-4ff8-8bbd-a1f8d13d1e4e";
+				PROVISIONING_PROFILE = "1692a7e0-2bc5-450f-9380-bf645d88e8f6";
 			};
 			name = Debug;
 		};
@@ -560,7 +560,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dbf0ea61-eb87-4ff8-8bbd-a1f8d13d1e4e";
+				PROVISIONING_PROFILE = "1692a7e0-2bc5-450f-9380-bf645d88e8f6";
 			};
 			name = Release;
 		};
@@ -581,7 +581,7 @@
 				INFOPLIST_FILE = CfSmartTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dbf0ea61-eb87-4ff8-8bbd-a1f8d13d1e4e";
+				PROVISIONING_PROFILE = "1692a7e0-2bc5-450f-9380-bf645d88e8f6";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CfSmart.app/CfSmart";
 			};
 			name = Debug;
@@ -599,7 +599,7 @@
 				INFOPLIST_FILE = CfSmartTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dbf0ea61-eb87-4ff8-8bbd-a1f8d13d1e4e";
+				PROVISIONING_PROFILE = "1692a7e0-2bc5-450f-9380-bf645d88e8f6";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CfSmart.app/CfSmart";
 			};
 			name = Release;
@@ -661,7 +661,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dbf0ea61-eb87-4ff8-8bbd-a1f8d13d1e4e";
+				PROVISIONING_PROFILE = "1692a7e0-2bc5-450f-9380-bf645d88e8f6";
 			};
 			name = Distributions;
 		};
@@ -681,7 +681,7 @@
 				INFOPLIST_FILE = CfSmartTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dbf0ea61-eb87-4ff8-8bbd-a1f8d13d1e4e";
+				PROVISIONING_PROFILE = "1692a7e0-2bc5-450f-9380-bf645d88e8f6";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CfSmart.app/CfSmart";
 			};
 			name = Distributions;
