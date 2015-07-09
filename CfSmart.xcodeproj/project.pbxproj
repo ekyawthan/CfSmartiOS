@@ -291,6 +291,7 @@
 					};
 					5543F2661B1D301500216B23 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = UX56ED85HW;
 						TestTargetID = 5543F2511B1D301500216B23;
 					};
 				};
@@ -489,7 +490,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "a68c45f5-5ee8-4f20-9bb4-48f676cfb667";
+				PROVISIONING_PROFILE = "dbf0ea61-eb87-4ff8-8bbd-a1f8d13d1e4e";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -528,7 +529,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "a68c45f5-5ee8-4f20-9bb4-48f676cfb667";
+				PROVISIONING_PROFILE = "dbf0ea61-eb87-4ff8-8bbd-a1f8d13d1e4e";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -540,12 +541,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: David Putrino (UX56ED85HW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Putrino (UX56ED85HW)";
 				INFOPLIST_FILE = CfSmart/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1692a7e0-2bc5-450f-9380-bf645d88e8f6";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -555,12 +557,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: David Putrino (UX56ED85HW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Putrino (UX56ED85HW)";
 				INFOPLIST_FILE = CfSmart/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1692a7e0-2bc5-450f-9380-bf645d88e8f6";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -568,8 +571,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: David Putrino (UX56ED85HW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Putrino (UX56ED85HW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: David Putrino (UY9C7TLCKX)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: David Putrino (UY9C7TLCKX)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -581,7 +584,7 @@
 				INFOPLIST_FILE = CfSmartTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1692a7e0-2bc5-450f-9380-bf645d88e8f6";
+				PROVISIONING_PROFILE = "dbf0ea61-eb87-4ff8-8bbd-a1f8d13d1e4e";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CfSmart.app/CfSmart";
 			};
 			name = Debug;
@@ -590,8 +593,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: David Putrino (UX56ED85HW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Putrino (UX56ED85HW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: David Putrino (UY9C7TLCKX)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: David Putrino (UY9C7TLCKX)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -599,7 +602,7 @@
 				INFOPLIST_FILE = CfSmartTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1692a7e0-2bc5-450f-9380-bf645d88e8f6";
+				PROVISIONING_PROFILE = "dbf0ea61-eb87-4ff8-8bbd-a1f8d13d1e4e";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CfSmart.app/CfSmart";
 			};
 			name = Release;
@@ -644,7 +647,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "a68c45f5-5ee8-4f20-9bb4-48f676cfb667";
+				PROVISIONING_PROFILE = "dbf0ea61-eb87-4ff8-8bbd-a1f8d13d1e4e";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -656,12 +659,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: David Putrino (UX56ED85HW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Putrino (UX56ED85HW)";
 				INFOPLIST_FILE = CfSmart/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1692a7e0-2bc5-450f-9380-bf645d88e8f6";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Distributions;
 		};
@@ -669,7 +673,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: David Putrino (UX56ED85HW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: David Putrino (UY9C7TLCKX)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: David Putrino (UY9C7TLCKX)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -681,7 +686,7 @@
 				INFOPLIST_FILE = CfSmartTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1692a7e0-2bc5-450f-9380-bf645d88e8f6";
+				PROVISIONING_PROFILE = "dbf0ea61-eb87-4ff8-8bbd-a1f8d13d1e4e";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CfSmart.app/CfSmart";
 			};
 			name = Distributions;

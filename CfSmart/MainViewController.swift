@@ -106,10 +106,10 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
     
     func toggleSurveyButton() {
         if survey.isSurveyAvailable(){
-            surveyStatus.text = "Survey Available"
+            surveyStatus.text = ""
             takeSurvey.userInteractionEnabled = true
             takeSurvey.backgroundColor = UIColor.blueColor()
-            takeSurvey.setTitle("Take Survey", forState: UIControlState.Normal)
+            takeSurvey.setTitle("Begin Questionnaire", forState: UIControlState.Normal)
         }else{
             surveyStatus.lineBreakMode = .ByWordWrapping
             surveyStatus.numberOfLines = 0

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -64,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="351" y="353"/>
+            <point key="canvasLocation" x="23" y="301"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="Kbc-8x-t8b">
@@ -79,14 +79,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Lm-Ra-6hP">
-                                <rect key="frame" x="16" y="113" width="568" height="0.0"/>
+                                <rect key="frame" x="16" y="69" width="568" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" red="0.9647059440612793" green="0.30196079611778259" blue="0.12156863510608673" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMn-zV-5K5" customClass="MKButton" customModule="CfSmart" customModuleProvider="target">
-                                <rect key="frame" x="200" y="489" width="200" height="50"/>
+                                <rect key="frame" x="200" y="275" width="200" height="50"/>
                                 <color key="backgroundColor" red="0.13725490868091583" green="0.12156863510608673" blue="0.59607845544815063" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="NiA-Da-NLR"/>
+                                    <constraint firstAttribute="height" constant="50" id="avd-2B-Wnu"/>
+                                </constraints>
                                 <state key="normal" title="Begin Questionnaire">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -95,15 +99,6 @@
                                     <segue destination="Aee-Br-sU9" kind="custom" id="7PU-nW-9Hs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank You for Completing This Questionnaire" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="18a-k9-Tcq">
-                                <rect key="frame" x="16" y="225" width="568" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="LA3-Xy-kV1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00v-g5-OwJ" customClass="MKButton" customModule="CfSmart" customModuleProvider="target">
                                 <rect key="frame" x="200" y="542" width="200" height="50"/>
                                 <constraints>
@@ -119,9 +114,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.70000000000000007" translatesAutoresizingMaskIntoConstraints="NO" id="85u-zg-3zX">
-                                <rect key="frame" x="16" y="78" width="568" height="35"/>
+                                <rect key="frame" x="16" y="34" width="568" height="35"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="SMART-CF QUESTIONNAIRE">
+                                    <fragment content="SMART-CF ">
                                         <attributes>
                                             <color key="NSColor" red="0.53062065972222228" green="0.71278211805555558" blue="0.069835069444444439" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="30" name="HelveticaNeue"/>
@@ -131,31 +126,37 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank You for Completing This Questionnaire" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="18a-k9-Tcq">
+                                <rect key="frame" x="11" y="333" width="568" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="U5F-vY-0ys"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="85u-zg-3zX" firstAttribute="trailing" secondItem="cWH-DH-GQP" secondAttribute="trailingMargin" id="0Gy-DS-CCx"/>
-                            <constraint firstItem="00v-g5-OwJ" firstAttribute="top" secondItem="JMn-zV-5K5" secondAttribute="bottom" constant="3" id="4Gw-V8-83t"/>
                             <constraint firstItem="vRw-8O-H9B" firstAttribute="top" secondItem="00v-g5-OwJ" secondAttribute="bottom" constant="8" id="5UG-j1-RmJ"/>
                             <constraint firstItem="85u-zg-3zX" firstAttribute="bottom" secondItem="1Lm-Ra-6hP" secondAttribute="bottom" id="6fX-Hd-2hp"/>
+                            <constraint firstItem="18a-k9-Tcq" firstAttribute="top" secondItem="JMn-zV-5K5" secondAttribute="bottom" constant="8" symbolic="YES" id="H8r-L2-ZlN"/>
                             <constraint firstItem="85u-zg-3zX" firstAttribute="trailing" secondItem="1Lm-Ra-6hP" secondAttribute="trailing" id="HoA-QA-F21"/>
                             <constraint firstAttribute="centerX" secondItem="00v-g5-OwJ" secondAttribute="centerX" id="KhN-6j-8pD"/>
                             <constraint firstItem="85u-zg-3zX" firstAttribute="leading" secondItem="1Lm-Ra-6hP" secondAttribute="leading" id="MYb-z9-42Z"/>
-                            <constraint firstAttribute="centerY" secondItem="18a-k9-Tcq" secondAttribute="centerY" id="Mpo-18-2jH"/>
-                            <constraint firstItem="JMn-zV-5K5" firstAttribute="leading" secondItem="00v-g5-OwJ" secondAttribute="leading" id="SW0-Hm-XVz"/>
-                            <constraint firstItem="18a-k9-Tcq" firstAttribute="leading" secondItem="cWH-DH-GQP" secondAttribute="leadingMargin" id="Xz3-j4-fej"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="18a-k9-Tcq" secondAttribute="trailing" id="cwW-sN-t00"/>
+                            <constraint firstAttribute="centerX" secondItem="JMn-zV-5K5" secondAttribute="centerX" id="Xk9-rZ-q22"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="18a-k9-Tcq" secondAttribute="trailing" constant="5" id="dCZ-1g-g53"/>
                             <constraint firstItem="85u-zg-3zX" firstAttribute="top" secondItem="uCl-e2-lf6" secondAttribute="bottom" constant="14" id="dqw-iu-F5L"/>
-                            <constraint firstItem="JMn-zV-5K5" firstAttribute="height" secondItem="00v-g5-OwJ" secondAttribute="height" id="gEu-cs-uIT"/>
+                            <constraint firstAttribute="centerY" secondItem="JMn-zV-5K5" secondAttribute="centerY" id="fbR-wm-ECZ"/>
                             <constraint firstItem="85u-zg-3zX" firstAttribute="leading" secondItem="cWH-DH-GQP" secondAttribute="leadingMargin" id="hNd-K2-xGo"/>
-                            <constraint firstItem="JMn-zV-5K5" firstAttribute="width" secondItem="00v-g5-OwJ" secondAttribute="width" id="hgN-rh-pks"/>
-                            <constraint firstItem="JMn-zV-5K5" firstAttribute="trailing" secondItem="00v-g5-OwJ" secondAttribute="trailing" id="j2c-Ff-8Op"/>
+                            <constraint firstItem="18a-k9-Tcq" firstAttribute="leading" secondItem="cWH-DH-GQP" secondAttribute="leadingMargin" constant="-5" id="ndP-Xd-49L"/>
                             <constraint firstItem="85u-zg-3zX" firstAttribute="leading" secondItem="cWH-DH-GQP" secondAttribute="leadingMargin" id="tK8-kr-YVX"/>
                             <constraint firstItem="85u-zg-3zX" firstAttribute="top" secondItem="uCl-e2-lf6" secondAttribute="bottom" constant="14" id="txf-Bd-txp"/>
-                            <constraint firstAttribute="centerX" secondItem="18a-k9-Tcq" secondAttribute="centerX" id="wHY-Gs-8a3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mMC-YD-mLj"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="surveyStatus" destination="18a-k9-Tcq" id="8A9-zM-waW"/>
                         <outlet property="takeSurvey" destination="JMn-zV-5K5" id="zub-Vm-LD7"/>
@@ -163,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVe-Ix-eoa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1832" y="345"/>
+            <point key="canvasLocation" x="2092" y="-187"/>
         </scene>
         <!--Survey View Controller-->
         <scene sceneID="q1n-c5-FAp">
@@ -267,7 +268,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GsD-E7-IWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2561" y="334"/>
+            <point key="canvasLocation" x="2833" y="224"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ATb-3q-k1K">
